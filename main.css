@@ -12,7 +12,7 @@
 }
 
 .imagery {
-    flex: 1 1 60%;
+    flex: 1 1 40%;
     width: 60%;
     padding: 50px 100px;
     background-color: #2484E4;
@@ -39,7 +39,77 @@
     font-size: 32px;
     font-weight: 900;
 }
+.detail h2{
+    color: #3b4455;
+    font-size: 22px;
+    font-weight: 700px;
+}
+.detail h3{
+    color: #53565A;
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+.btn_grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -15px;
+}
+.btn_grid .btn_wrap{
+    flex: 1 1 50%;
+    width: 50%;
+    padding: 15px;
+}
+button{
+    display: block;
+    width: 100%;
+    padding: 15px;
 
+    appearance: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    border: 2px solid #EEE ;
+
+    color: #313131;
+    font-size: 20px;
+    font-weight: 700;
+
+    transition: 0.4s;
+}
+button:hover{
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+button.size{
+    position: relative;
+    z-index: 1;
+}
+button.size::after,
+button.size::before{
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    
+    transition: 0.4s;
+}
+button.size::after{
+    z-index: 1;
+    background-color: #FFF;
+    border: 1px solid #EEE;
+}
+button.size::before{
+    z-index: -1;
+    background-image: linear-gradient(to right, #ED008D, #8D00ED);
+}
+button.size.selected::after{
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
 @keyframes fadein{
     0% {opacity: 0;}
     100% {opacity: 1;}

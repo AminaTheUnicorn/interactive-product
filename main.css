@@ -96,12 +96,12 @@ button.size::before{
     transition: 0.4s;
 }
 button.size::after{
-    z-index: 1;
+    z-index: -1;
     background-color: #FFF;
     border: 1px solid #EEE;
 }
-button.size::before{
-    z-index: -1;
+button.size::before {
+    z-index: -2;
     background-image: linear-gradient(to right, #ED008D, #8D00ED);
 }
 button.size.selected::after{
